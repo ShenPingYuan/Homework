@@ -22,7 +22,8 @@ namespace IdentityServer
             var services = new ServiceCollection();
             services.AddLogging();
             services.AddDbContext<ApplicationDbContext>(options =>
-               options.UseSqlite(connectionString));
+               options.UseMySql(connectionString,
+                             b => b.MigrationsAssembly("IdentityServerAspNetIdentity")));//migrationAssembly or IdentityServerAspNetIdentity
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -37,6 +38,16 @@ namespace IdentityServer
 
                     var userMgr = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
                     var alice = userMgr.FindByNameAsync("alice").Result;
+                    var aliceClaim = new Claim[]
+                    {
+                        new Claim(JwtClaimTypes.Name, "Alice Smith"),
+                        new Claim(JwtClaimTypes.GivenName, "Alice"),
+                        new Claim(JwtClaimTypes.FamilyName, "Smith"),
+                        new Claim(JwtClaimTypes.WebSite, "http://alice.com"),
+                        new Claim(JwtClaimTypes.Gender,"女人"),
+                        new Claim(JwtClaimTypes.Role,"管理员"),
+                        new Claim(JwtClaimTypes.Address,"重庆"),
+                    };
                     if (alice == null)
                     {
                         alice = new ApplicationUser
@@ -51,24 +62,38 @@ namespace IdentityServer
                             throw new Exception(result.Errors.First().Description);
                         }
 
-                        result = userMgr.AddClaimsAsync(alice, new Claim[]{
-                            new Claim(JwtClaimTypes.Name, "Alice Smith"),
-                            new Claim(JwtClaimTypes.GivenName, "Alice"),
-                            new Claim(JwtClaimTypes.FamilyName, "Smith"),
-                            new Claim(JwtClaimTypes.WebSite, "http://alice.com"),
-                        }).Result;
+                        result = userMgr.AddClaimsAsync(alice, aliceClaim).GetAwaiter().GetResult();
                         if (!result.Succeeded)
                         {
                             throw new Exception(result.Errors.First().Description);
                         }
-                        Log.Debug("alice created");
+                        Log.Information("alice created");
                     }
                     else
                     {
-                        Log.Debug("alice already exists");
+                        Log.Information("alice already exists");
+                        Log.Information("updating alice...");
+                        var result = userMgr.RemoveClaimsAsync(alice, userMgr.GetClaimsAsync(alice).GetAwaiter().GetResult()).GetAwaiter().GetResult();
+                        var resultAddClaim = userMgr.AddClaimsAsync(alice, aliceClaim).GetAwaiter().GetResult();
+                        if (!result.Succeeded && !resultAddClaim.Succeeded)
+                        {
+                            throw new Exception(result.Errors.First().Description);
+                        }
+                        Log.Information("alice updated");
                     }
 
                     var bob = userMgr.FindByNameAsync("bob").Result;
+                    var bobClaim = new Claim[]
+                    {
+                            new Claim(JwtClaimTypes.Name, "Bob Smith"),
+                            new Claim(JwtClaimTypes.GivenName, "Bob"),
+                            new Claim(JwtClaimTypes.FamilyName, "Smith"),
+                            new Claim(JwtClaimTypes.WebSite, "http://bob.com"),
+                            new Claim("location", "somewhere"),
+                            new Claim(JwtClaimTypes.Gender,"男人"),
+                            new Claim(JwtClaimTypes.Role,"普通员工"),
+                            new Claim(JwtClaimTypes.Address,"四川"),
+                    };
                     if (bob == null)
                     {
                         bob = new ApplicationUser
@@ -83,22 +108,24 @@ namespace IdentityServer
                             throw new Exception(result.Errors.First().Description);
                         }
 
-                        result = userMgr.AddClaimsAsync(bob, new Claim[]{
-                            new Claim(JwtClaimTypes.Name, "Bob Smith"),
-                            new Claim(JwtClaimTypes.GivenName, "Bob"),
-                            new Claim(JwtClaimTypes.FamilyName, "Smith"),
-                            new Claim(JwtClaimTypes.WebSite, "http://bob.com"),
-                            new Claim("location", "somewhere")
-                        }).Result;
+                        result = userMgr.AddClaimsAsync(bob, bobClaim).GetAwaiter().GetResult();
                         if (!result.Succeeded)
                         {
                             throw new Exception(result.Errors.First().Description);
                         }
-                        Log.Debug("bob created");
+                        Log.Information("bob created");
                     }
                     else
                     {
-                        Log.Debug("bob already exists");
+                        Log.Information("bob already exists");
+                        Log.Information("updating bob...");
+                        var result = userMgr.RemoveClaimsAsync(bob, userMgr.GetClaimsAsync(bob).GetAwaiter().GetResult()).GetAwaiter().GetResult();
+                        var resultAddClaim = userMgr.AddClaimsAsync(bob, bobClaim).GetAwaiter().GetResult();
+                        if (!result.Succeeded && !resultAddClaim.Succeeded)
+                        {
+                            throw new Exception(result.Errors.First().Description);
+                        }
+                        Log.Information("bob updated");
                     }
                 }
             }
