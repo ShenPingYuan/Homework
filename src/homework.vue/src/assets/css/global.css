@@ -1,0 +1,7 @@
+/*全局标签*/
+html,body,#app{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: rgba(46, 59, 70, 0.5);
+}
