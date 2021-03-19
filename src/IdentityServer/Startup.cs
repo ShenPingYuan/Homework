@@ -17,6 +17,7 @@ using Microsoft.IdentityModel.Tokens;
 using IdentityServer4.EntityFramework.DbContexts;
 using IdentityServer4.EntityFramework.Mappers;
 using System.Linq;
+using IdentityServer4.EntityFramework.Entities;
 
 namespace IdentityServer
 {
@@ -147,7 +148,7 @@ namespace IdentityServer
 
                 var context = serviceScope.ServiceProvider.GetRequiredService<ConfigurationDbContext>();
                 context.Database.Migrate();
-                var clientE = context.Clients.First();
+                Client clientE = context.Clients.FirstOrDefault();
                 if (clientE == null)
                 {
                     if (!context.Clients.Any())

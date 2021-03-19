@@ -8,7 +8,7 @@ using IdentityServer4.Extensions;
 using IdentityServer4.Models;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
-using IdentityServer.Models;
+using IdentityServerAspNetIdentity.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -61,10 +61,26 @@ namespace IdentityServerHost.Quickstart.UI
                 // we only have one option for logging in and it's an external provider
                 return RedirectToAction("Challenge", "External", new { scheme = vm.ExternalLoginScheme, returnUrl });
             }
-
             return View(vm);
         }
-
+        [HttpGet]
+        public async Task<IActionResult> DeleteUser(string name)
+        {
+            if (name == null)
+            {
+                return BadRequest("名字不能为空");
+            }
+            var user =await _userManager.FindByNameAsync(name);
+            if(user!=null)
+            {
+                var result=await _userManager.DeleteAsync(user);
+                if (result.Succeeded)
+                {
+                    return Ok("删除成功");
+                }
+            }
+            return Ok("删除失败");
+        }
         /// <summary>
         /// Handle postback from username/password login
         /// </summary>

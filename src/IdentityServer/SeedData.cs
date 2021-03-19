@@ -4,6 +4,7 @@
 
 using System;
 using System.Linq;
+using System.Reflection;
 using System.Security.Claims;
 using IdentityModel;
 using IdentityServer.Data;
@@ -19,11 +20,12 @@ namespace IdentityServer
     {
         public static void EnsureSeedData(string connectionString)
         {
+            var migrationAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;//get current assembly
             var services = new ServiceCollection();
             services.AddLogging();
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseMySql(connectionString,
-                             b => b.MigrationsAssembly("IdentityServerAspNetIdentity")));//migrationAssembly or IdentityServerAspNetIdentity
+                             b => b.MigrationsAssembly(migrationAssembly)));//migrationAssembly or IdentityServerAspNetIdentity
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
