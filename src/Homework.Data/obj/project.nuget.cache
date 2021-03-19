@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ysvUV5IyOkJviFuKO4QYQTnROLU5W78wyOFYkmAhr5yNJ1AnD6bQkF+U6JdRQuUNwH1w+0jTq7LsyHbknqaNVQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\Homework.Data.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MichaelShen\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\MichaelShen\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
