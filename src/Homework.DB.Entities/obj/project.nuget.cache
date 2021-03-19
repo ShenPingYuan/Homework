@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HwDFLamWCP8W2TclwhuAE8GjoP7LiSca/sdb7qU4MC0ex83zJtMtXIxUX6t/PirGyLFmRfXjGUXUcMnn6CNHgQ==",
+  "dgSpecHash": "k3/XE/nEoQhCXdj56MPfHQqxLumsRpc8AUmGzyBF0/Lu7OrIZDnHhiZHHNX7pBE/ga3W0cqbNqFDZ1I7vI+QHw==",
   "success": true,
   "projectFilePath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.DB.Entities.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\MichaelShen\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\MichaelShen\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
