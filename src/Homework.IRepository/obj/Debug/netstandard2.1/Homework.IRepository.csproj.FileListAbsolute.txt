@@ -1,0 +1,9 @@
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.IRepository\bin\Debug\netstandard2.1\Homework.IRepository.deps.json
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.IRepository\bin\Debug\netstandard2.1\Homework.IRepository.dll
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.IRepository\bin\Debug\netstandard2.1\Homework.IRepository.pdb
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.IRepository\obj\Debug\netstandard2.1\Homework.IRepository.csprojAssemblyReference.cache
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.IRepository\obj\Debug\netstandard2.1\Homework.IRepository.AssemblyInfoInputs.cache
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.IRepository\obj\Debug\netstandard2.1\Homework.IRepository.AssemblyInfo.cs
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.IRepository\obj\Debug\netstandard2.1\Homework.IRepository.csproj.CoreCompileInputs.cache
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.IRepository\obj\Debug\netstandard2.1\Homework.IRepository.dll
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.IRepository\obj\Debug\netstandard2.1\Homework.IRepository.pdb

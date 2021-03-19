@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bXqOpmdLKY4smWxqSFoK9oZiJ8CxKimaqWUtw3aSo4LEvU4YfvhTL2tEc8Bw5SL7FQ8zRfZdqv8UO6y8euX9pQ==",
+  "dgSpecHash": "viUREk1wAOkeABvXn8bZ/SPxh8LIEdYXiSXVXw+Ua2wWUkbrutpq4k9UH+9rR5GKQR0PPl2ewSum0SD2+um6+A==",
   "success": true,
   "projectFilePath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Repository\\Homework.Repository.csproj",
   "expectedPackageFiles": [
@@ -22,7 +22,7 @@
     "C:\\Users\\MichaelShen\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.13\\microsoft.extensions.primitives.3.1.13.nupkg.sha512",
     "C:\\Users\\MichaelShen\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\MichaelShen\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
-    "C:\\Users\\MichaelShen\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\MichaelShen\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\MichaelShen\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
     "C:\\Users\\MichaelShen\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\MichaelShen\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",

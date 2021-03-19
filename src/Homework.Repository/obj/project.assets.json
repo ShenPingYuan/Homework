@@ -218,7 +218,7 @@
           "lib/netstandard2.0/System.Collections.Immutable.dll": {}
         }
       },
-      "System.ComponentModel.Annotations/4.7.0": {
+      "System.ComponentModel.Annotations/5.0.0": {
         "type": "package",
         "compile": {
           "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
@@ -283,10 +283,21 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
+      "Homework.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Homework.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Homework.Core.dll": {}
+        }
+      },
       "Homework.Data/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "Homework.DB.Entities": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.13"
         },
         "compile": {
@@ -294,6 +305,20 @@
         },
         "runtime": {
           "bin/placeholder/Homework.Data.dll": {}
+        }
+      },
+      "Homework.DB.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Homework.Core": "1.0.0",
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Homework.DB.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Homework.DB.Entities.dll": {}
         }
       }
     }
@@ -627,13 +652,14 @@
         "version.txt"
       ]
     },
-    "System.ComponentModel.Annotations/4.7.0": {
-      "sha512": "0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
+    "System.ComponentModel.Annotations/5.0.0": {
+      "sha512": "dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
       "type": "package",
-      "path": "system.componentmodel.annotations/4.7.0",
+      "path": "system.componentmodel.annotations/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -710,7 +736,7 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.componentmodel.annotations.4.7.0.nupkg.sha512",
+        "system.componentmodel.annotations.5.0.0.nupkg.sha512",
         "system.componentmodel.annotations.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -875,10 +901,20 @@
         "version.txt"
       ]
     },
+    "Homework.Core/1.0.0": {
+      "type": "project",
+      "path": "../Homework.Core/Homework.Core.csproj",
+      "msbuildProject": "../Homework.Core/Homework.Core.csproj"
+    },
     "Homework.Data/1.0.0": {
       "type": "project",
       "path": "../Homework.Data/Homework.Data.csproj",
       "msbuildProject": "../Homework.Data/Homework.Data.csproj"
+    },
+    "Homework.DB.Entities/1.0.0": {
+      "type": "project",
+      "path": "../Homework.DB.Entities/Homework.DB.Entities.csproj",
+      "msbuildProject": "../Homework.DB.Entities/Homework.DB.Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {

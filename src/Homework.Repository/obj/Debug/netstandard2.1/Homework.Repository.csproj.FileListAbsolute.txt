@@ -1,0 +1,12 @@
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.Repository\bin\Debug\netstandard2.1\Homework.Repository.deps.json
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.Repository\bin\Debug\netstandard2.1\Homework.Repository.dll
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.Repository\bin\Debug\netstandard2.1\Homework.Repository.pdb
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.Repository\bin\Debug\netstandard2.1\Homework.Data.dll
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.Repository\bin\Debug\netstandard2.1\Homework.Data.pdb
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.Repository\obj\Debug\netstandard2.1\Homework.Repository.csprojAssemblyReference.cache
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.Repository\obj\Debug\netstandard2.1\Homework.Repository.AssemblyInfoInputs.cache
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.Repository\obj\Debug\netstandard2.1\Homework.Repository.AssemblyInfo.cs
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.Repository\obj\Debug\netstandard2.1\Homework.Repository.csproj.CoreCompileInputs.cache
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.Repository\obj\Debug\netstandard2.1\Homework.Repository.csproj.CopyComplete
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.Repository\obj\Debug\netstandard2.1\Homework.Repository.dll
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.Repository\obj\Debug\netstandard2.1\Homework.Repository.pdb

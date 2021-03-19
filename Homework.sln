@@ -19,19 +19,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5_Infrastructure", "5_Infra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6_Test", "6_Test", "{022BC006-235B-4357-AFF5-32340CD6CF90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Api", "src\Homework.Api\Homework.Api.csproj", "{22112E14-586A-4D5C-B8E2-2F0B420218A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Api", "src\Homework.Api\Homework.Api.csproj", "{22112E14-586A-4D5C-B8E2-2F0B420218A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Test", "src\Homework.Test\Homework.Test.csproj", "{8AEDE664-6510-4442-989F-49D107103DA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Test", "src\Homework.Test\Homework.Test.csproj", "{8AEDE664-6510-4442-989F-49D107103DA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.IRepository", "src\Homework.IRepository\Homework.IRepository.csproj", "{937C3B5D-035F-4180-9ECA-4BE58866829F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.IRepository", "src\Homework.IRepository\Homework.IRepository.csproj", "{937C3B5D-035F-4180-9ECA-4BE58866829F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Repository", "src\Homework.Repository\Homework.Repository.csproj", "{46789832-F799-481D-BBFD-247D6E847E10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Repository", "src\Homework.Repository\Homework.Repository.csproj", "{46789832-F799-481D-BBFD-247D6E847E10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.DB.Entities", "src\Homework.DB.Entities\Homework.DB.Entities.csproj", "{51D38152-2780-423D-8D5F-246709897254}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.DB.Entities", "src\Homework.DB.Entities\Homework.DB.Entities.csproj", "{51D38152-2780-423D-8D5F-246709897254}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.View.Entities", "src\Homework.View.Entities\Homework.View.Entities.csproj", "{614DCA6C-63BD-4F77-A3EF-05C5D701D701}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.View.Entities", "src\Homework.View.Entities\Homework.View.Entities.csproj", "{614DCA6C-63BD-4F77-A3EF-05C5D701D701}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Data", "src\Homework.Data\Homework.Data.csproj", "{B5261638-97E4-4ADE-BF01-73140B887CEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Data", "src\Homework.Data\Homework.Data.csproj", "{B5261638-97E4-4ADE-BF01-73140B887CEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Core", "src\Homework.Core\Homework.Core.csproj", "{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -139,6 +141,18 @@ Global
 		{B5261638-97E4-4ADE-BF01-73140B887CEB}.Release|x64.Build.0 = Release|Any CPU
 		{B5261638-97E4-4ADE-BF01-73140B887CEB}.Release|x86.ActiveCfg = Release|Any CPU
 		{B5261638-97E4-4ADE-BF01-73140B887CEB}.Release|x86.Build.0 = Release|Any CPU
+		{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}.Debug|x64.Build.0 = Debug|Any CPU
+		{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}.Debug|x86.Build.0 = Debug|Any CPU
+		{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}.Release|x64.ActiveCfg = Release|Any CPU
+		{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}.Release|x64.Build.0 = Release|Any CPU
+		{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}.Release|x86.ActiveCfg = Release|Any CPU
+		{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -158,6 +172,7 @@ Global
 		{51D38152-2780-423D-8D5F-246709897254} = {45824196-510B-456F-93B9-BA6D51C235BF}
 		{614DCA6C-63BD-4F77-A3EF-05C5D701D701} = {45824196-510B-456F-93B9-BA6D51C235BF}
 		{B5261638-97E4-4ADE-BF01-73140B887CEB} = {5B250BCC-7D30-441B-A396-081B1471C11B}
+		{DB21D82A-FC5E-4850-9345-6062A6F8D8C1} = {3B4195BA-95CD-4641-89F4-36E022CECBF6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6C3B44B3-D0AD-47AE-931F-BD62FFB1A323}

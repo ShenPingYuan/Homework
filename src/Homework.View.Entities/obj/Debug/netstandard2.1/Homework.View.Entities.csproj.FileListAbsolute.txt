@@ -1,0 +1,9 @@
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\bin\Debug\netstandard2.1\Homework.View.Entities.deps.json
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\bin\Debug\netstandard2.1\Homework.View.Entities.dll
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\bin\Debug\netstandard2.1\Homework.View.Entities.pdb
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\obj\Debug\netstandard2.1\Homework.View.Entities.csprojAssemblyReference.cache
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\obj\Debug\netstandard2.1\Homework.View.Entities.AssemblyInfoInputs.cache
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\obj\Debug\netstandard2.1\Homework.View.Entities.AssemblyInfo.cs
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\obj\Debug\netstandard2.1\Homework.View.Entities.csproj.CoreCompileInputs.cache
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\obj\Debug\netstandard2.1\Homework.View.Entities.dll
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\obj\Debug\netstandard2.1\Homework.View.Entities.pdb

@@ -1,0 +1,4 @@
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\obj\Debug\netstandard2.1\Homework.DB.Entities.csprojAssemblyReference.cache
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\obj\Debug\netstandard2.1\Homework.DB.Entities.AssemblyInfoInputs.cache
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\obj\Debug\netstandard2.1\Homework.DB.Entities.AssemblyInfo.cs
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\obj\Debug\netstandard2.1\Homework.DB.Entities.csproj.CoreCompileInputs.cache
