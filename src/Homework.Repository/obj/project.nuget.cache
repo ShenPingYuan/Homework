@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "viUREk1wAOkeABvXn8bZ/SPxh8LIEdYXiSXVXw+Ua2wWUkbrutpq4k9UH+9rR5GKQR0PPl2ewSum0SD2+um6+A==",
+  "dgSpecHash": "Q5Kv+LoQm34ydT0bZQwThZa8cRYxNzbqmmHKHjcxJ83rPfhpxuQbrZn2Nd4A55W4kk4EfWfeL8pOwQZaLUPmkw==",
   "success": true,
   "projectFilePath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Repository\\Homework.Repository.csproj",
   "expectedPackageFiles": [
@@ -18,7 +18,10 @@
     "C:\\Users\\MichaelShen\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.13\\microsoft.extensions.dependencyinjection.abstractions.3.1.13.nupkg.sha512",
     "C:\\Users\\MichaelShen\\.nuget\\packages\\microsoft.extensions.logging\\3.1.13\\microsoft.extensions.logging.3.1.13.nupkg.sha512",
     "C:\\Users\\MichaelShen\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.13\\microsoft.extensions.logging.abstractions.3.1.13.nupkg.sha512",
+    "C:\\Users\\MichaelShen\\.nuget\\packages\\microsoft.extensions.logging.configuration\\3.1.13\\microsoft.extensions.logging.configuration.3.1.13.nupkg.sha512",
+    "C:\\Users\\MichaelShen\\.nuget\\packages\\microsoft.extensions.logging.console\\3.1.13\\microsoft.extensions.logging.console.3.1.13.nupkg.sha512",
     "C:\\Users\\MichaelShen\\.nuget\\packages\\microsoft.extensions.options\\3.1.13\\microsoft.extensions.options.3.1.13.nupkg.sha512",
+    "C:\\Users\\MichaelShen\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\3.1.13\\microsoft.extensions.options.configurationextensions.3.1.13.nupkg.sha512",
     "C:\\Users\\MichaelShen\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.13\\microsoft.extensions.primitives.3.1.13.nupkg.sha512",
     "C:\\Users\\MichaelShen\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\MichaelShen\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",

@@ -1,5 +1,6 @@
 ﻿using Homework.DB.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,10 +12,14 @@ namespace Homework.Data
         public ApplicationDbContext(DbContextOptions option) : base(option)
         {
         }
-
+        public static readonly ILoggerFactory Homework_EFLoggerFactory = LoggerFactory.Create(config =>
+        {
+            config.AddConsole();
+        });
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
         }
         public virtual DbSet<Choice> Choices { get; set; }
         public virtual DbSet<Course> Courses { get; set; }

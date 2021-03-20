@@ -107,6 +107,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.13, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[3.1.13, )"
             }
           },
           "imports": [

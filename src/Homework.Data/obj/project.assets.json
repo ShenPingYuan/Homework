@@ -170,6 +170,33 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
+      "Microsoft.Extensions.Logging.Configuration/3.1.13": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "3.1.13",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "3.1.13"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Console/3.1.13": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.13",
+          "Microsoft.Extensions.Logging": "3.1.13",
+          "Microsoft.Extensions.Logging.Configuration": "3.1.13"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Console.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Console.dll": {}
+        }
+      },
       "Microsoft.Extensions.Options/3.1.13": {
         "type": "package",
         "dependencies": {
@@ -182,6 +209,21 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/3.1.13": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.13",
+          "Microsoft.Extensions.Configuration.Binder": "3.1.13",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.13",
+          "Microsoft.Extensions.Options": "3.1.13"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
         }
       },
       "Microsoft.Extensions.Primitives/3.1.13": {
@@ -549,6 +591,38 @@
         "microsoft.extensions.logging.abstractions.nuspec"
       ]
     },
+    "Microsoft.Extensions.Logging.Configuration/3.1.13": {
+      "sha512": "hRcDy98GSmSdBADPZxbU48wmlDgcNvnI27n+uSHXB8FBeLAGtJ5EisBAhWjeWsakBB1VrCIiIj1QtgMcUlkbVw==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.configuration/3.1.13",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Logging.Configuration.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Logging.Configuration.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.xml",
+        "microsoft.extensions.logging.configuration.3.1.13.nupkg.sha512",
+        "microsoft.extensions.logging.configuration.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Console/3.1.13": {
+      "sha512": "/4cMQkbRDmDrYQuYuyWDnbJZoVvAfs228wTjLOMKyjzKUrjpqiveP29lHJk2hePmBjW0iITZkDC2Dwe+y0WKcg==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.console/3.1.13",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Logging.Console.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Logging.Console.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Console.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Console.xml",
+        "microsoft.extensions.logging.console.3.1.13.nupkg.sha512",
+        "microsoft.extensions.logging.console.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Options/3.1.13": {
       "sha512": "+dGzq7kEkKCRO5kJ6JruOTbIk442OyB53mktUVmpgb9a5uFgv2WyZKWdN+uMJJQvY4bW+k5OJD5J6jA+DwX78w==",
       "type": "package",
@@ -563,6 +637,22 @@
         "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
         "microsoft.extensions.options.3.1.13.nupkg.sha512",
         "microsoft.extensions.options.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Options.ConfigurationExtensions/3.1.13": {
+      "sha512": "AY/5qjm1uUmekgHnXR7YqAf1N2DyocgBKamkamEKw65UFBO5Rli2fe0PwQ08Pz3Pyp8rRPDl7VL4zBwx+n48AQ==",
+      "type": "package",
+      "path": "microsoft.extensions.options.configurationextensions/3.1.13",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Options.ConfigurationExtensions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.xml",
+        "microsoft.extensions.options.configurationextensions.3.1.13.nupkg.sha512",
+        "microsoft.extensions.options.configurationextensions.nuspec"
       ]
     },
     "Microsoft.Extensions.Primitives/3.1.13": {
@@ -901,7 +991,8 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "Homework.DB.Entities >= 1.0.0",
-      "Microsoft.EntityFrameworkCore >= 3.1.13"
+      "Microsoft.EntityFrameworkCore >= 3.1.13",
+      "Microsoft.Extensions.Logging.Console >= 3.1.13"
     ]
   },
   "packageFolders": {
@@ -952,6 +1043,10 @@
         "targetAlias": "netstandard2.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[3.1.13, )"
+          },
+          "Microsoft.Extensions.Logging.Console": {
             "target": "Package",
             "version": "[3.1.13, )"
           }
