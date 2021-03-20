@@ -30,7 +30,17 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\Homework.Data.csproj": {
+                "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\Homework.Data.csproj"
+              },
+              "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.IRepository\\Homework.IRepository.csproj": {
+                "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.IRepository\\Homework.IRepository.csproj"
+              },
+              "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Repository\\Homework.Repository.csproj": {
+                "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Repository\\Homework.Repository.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -42,6 +52,54 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "IdentityServer4.AccessTokenValidation": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.23, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.2.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,6 +115,330 @@
               "privateAssets": "none"
             },
             "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Core\\Homework.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Core\\Homework.Core.csproj",
+        "projectName": "Homework.Core",
+        "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Core\\Homework.Core.csproj",
+        "packagesPath": "C:\\Users\\MichaelShen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MichaelShen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\Homework.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\Homework.Data.csproj",
+        "projectName": "Homework.Data",
+        "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\Homework.Data.csproj",
+        "packagesPath": "C:\\Users\\MichaelShen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MichaelShen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj": {
+                "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj",
+        "projectName": "Homework.Entities",
+        "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj",
+        "packagesPath": "C:\\Users\\MichaelShen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MichaelShen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Core\\Homework.Core.csproj": {
+                "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Core\\Homework.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.IRepository\\Homework.IRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.IRepository\\Homework.IRepository.csproj",
+        "projectName": "Homework.IRepository",
+        "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.IRepository\\Homework.IRepository.csproj",
+        "packagesPath": "C:\\Users\\MichaelShen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.IRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MichaelShen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj": {
+                "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Repository\\Homework.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Repository\\Homework.Repository.csproj",
+        "projectName": "Homework.Repository",
+        "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Repository\\Homework.Repository.csproj",
+        "packagesPath": "C:\\Users\\MichaelShen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MichaelShen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\Homework.Data.csproj": {
+                "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\Homework.Data.csproj"
+              },
+              "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.IRepository\\Homework.IRepository.csproj": {
+                "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.IRepository\\Homework.IRepository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
               "privateAssets": "all"
             }
           },

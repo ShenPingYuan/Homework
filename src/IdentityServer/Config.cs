@@ -204,6 +204,38 @@ namespace IdentityServer
                     AlwaysIncludeUserClaimsInIdToken=true,
                     RequireConsent=true,
                     AccessTokenType=AccessTokenType.Reference//默认AccessTokenType.Jwt
+                },
+                // SPA client using implicit flow
+                new Client
+                {
+                    ClientId = "homework.vue",
+                    ClientName = "Homework.Vue",
+                    ClientUri = "http://localhost:8080/",
+
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    // AccessToken 是否可以通过浏览器返回
+                    AllowAccessTokensViaBrowser = true,
+                    // 需要用户点击授权
+                    RequireConsent = true,
+                    // AccessToken 的有效期
+                    AccessTokenLifetime = 60 * 5,
+
+                    RedirectUris =
+                    {
+                        // 指定登录成功跳转回来的 uri
+                        "http://localhost:8080/signin-oidc",
+                        // AccessToken 有效期比较短，刷新 AccessToken 的页面
+                        "http://localhost:8080/redirect-silentrenew",
+                        "http://localhost:8080/silent.html",
+                        "http://localhost:8080/popup.html",
+                    },
+
+                    // 登出 以后跳转的页面
+                    PostLogoutRedirectUris = { "http://localhost:8080/" },
+                    // vue 和 IdentityServer 不在一个域上，需要指定跨域
+                    AllowedCorsOrigins = { "http://localhost:8080", "http://192.168.3.10:8080" },
+
+                    AllowedScopes = { "openid", "profile", "api1" }
                 }
             };
     }

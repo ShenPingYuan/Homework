@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Homework.DB.Entities
 {
@@ -11,6 +8,7 @@ namespace Homework.DB.Entities
         public Teacher()
         {
         }
+        public string Sub { get; set; }
         [Key]
         public string TeacherId { get; set; }
         public string TeacherName { get; set; }

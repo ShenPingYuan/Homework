@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qlXVSYRczmtAs3QzRhbK6+h+k/510Qq5Gp48bbZ3HMsopeYqLk2tIy0p+YQesgXSCnc21sE//W5JBUjG6Duhzw==",
+  "dgSpecHash": "/R0v5SucP3iJKaUw+97Zt/wMWeBKk3Gjjg5VJ6b6izJcsFZO9iJrtMQPMikgUCi3puiBUv7XWBuCY8H6dlrIgQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.DB.Entities.csproj",
+  "projectFilePath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MichaelShen\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],

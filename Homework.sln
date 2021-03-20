@@ -27,13 +27,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.IRepository", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Repository", "src\Homework.Repository\Homework.Repository.csproj", "{46789832-F799-481D-BBFD-247D6E847E10}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.DB.Entities", "src\Homework.DB.Entities\Homework.DB.Entities.csproj", "{51D38152-2780-423D-8D5F-246709897254}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Entities", "src\Homework.DB.Entities\Homework.Entities.csproj", "{51D38152-2780-423D-8D5F-246709897254}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.View.Entities", "src\Homework.View.Entities\Homework.View.Entities.csproj", "{614DCA6C-63BD-4F77-A3EF-05C5D701D701}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Dtos", "src\Homework.View.Entities\Homework.Dtos.csproj", "{614DCA6C-63BD-4F77-A3EF-05C5D701D701}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Data", "src\Homework.Data\Homework.Data.csproj", "{B5261638-97E4-4ADE-BF01-73140B887CEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Core", "src\Homework.Core\Homework.Core.csproj", "{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Core", "src\Homework.Core\Homework.Core.csproj", "{DB21D82A-FC5E-4850-9345-6062A6F8D8C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

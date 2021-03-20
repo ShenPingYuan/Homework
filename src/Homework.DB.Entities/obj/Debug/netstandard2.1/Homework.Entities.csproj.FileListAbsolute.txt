@@ -1,0 +1,12 @@
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\bin\Debug\netstandard2.1\Homework.Entities.deps.json
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\bin\Debug\netstandard2.1\Homework.Entities.dll
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\bin\Debug\netstandard2.1\Homework.Entities.pdb
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\bin\Debug\netstandard2.1\Homework.Core.dll
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\bin\Debug\netstandard2.1\Homework.Core.pdb
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\obj\Debug\netstandard2.1\Homework.Entities.csprojAssemblyReference.cache
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\obj\Debug\netstandard2.1\Homework.Entities.AssemblyInfoInputs.cache
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\obj\Debug\netstandard2.1\Homework.Entities.AssemblyInfo.cs
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\obj\Debug\netstandard2.1\Homework.Entities.csproj.CoreCompileInputs.cache
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\obj\Debug\netstandard2.1\Homework.Entities.csproj.CopyComplete
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\obj\Debug\netstandard2.1\Homework.Entities.dll
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.DB.Entities\obj\Debug\netstandard2.1\Homework.Entities.pdb

@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.View.Entities\\Homework.View.Entities.csproj",
-      "projectName": "Homework.View.Entities",
-      "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.View.Entities\\Homework.View.Entities.csproj",
+      "projectUniqueName": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.View.Entities\\Homework.Dtos.csproj",
+      "projectName": "Homework.Dtos",
+      "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.View.Entities\\Homework.Dtos.csproj",
       "packagesPath": "C:\\Users\\MichaelShen\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.View.Entities\\obj\\",
       "projectStyle": "PackageReference",

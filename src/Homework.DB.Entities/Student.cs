@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Homework.DB.Entities
 {
@@ -10,8 +10,11 @@ namespace Homework.DB.Entities
         public Student()
         {
             StudentCourses = new HashSet<StudentCourse>();
+            StudentWorks = new HashSet<StudentWork>();
         }
-
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string Sub { get; set; }
         public string StudentId { get; set; }
         public string StudentName { get; set; }
         //public string EnglishName { get; set; }
@@ -32,7 +35,8 @@ namespace Homework.DB.Entities
         ///// 家庭地址/区
         ///// </summary>
         //public string Area { get; set; }
-        
         public virtual ICollection<StudentCourse> StudentCourses { get; set; }
+        public virtual ICollection<StudentWork> StudentWorks{ get; set; }
+
     }
 }

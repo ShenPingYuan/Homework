@@ -63,22 +63,18 @@ namespace IdentityServer
                     ErrorUrl = "https://www.bilibili.com"
                 };
             })
-                 .AddAspNetIdentity<ApplicationUser>()
-                 .AddConfigurationStore(options =>
-                 {
-                     options.ConfigureDbContext = b => b.UseMySql(Configuration.GetConnectionString("MySQLConnection"),
-                         o => o.MigrationsAssembly(migrationAssembly));//migrationAssembly or IdentityServerAspNetIdentity
-                 })
-                    .AddOperationalStore(options =>
-                    {
-                        options.ConfigureDbContext = b => b.UseMySql(Configuration.GetConnectionString("MySQLConnection"),
-                             b => b.MigrationsAssembly(migrationAssembly));//migrationAssembly or IdentityServerAspNetIdentity
-                    });
+            .AddAspNetIdentity<ApplicationUser>()
+            .AddConfigurationStore(options =>
+            {
+                options.ConfigureDbContext = b => b.UseMySql(Configuration.GetConnectionString("MySQLConnection"),
+                    o => o.MigrationsAssembly(migrationAssembly));//migrationAssembly or IdentityServerAspNetIdentity
+            })
+            .AddOperationalStore(options =>
+            {
+                options.ConfigureDbContext = b => b.UseMySql(Configuration.GetConnectionString("MySQLConnection"),
+                        b => b.MigrationsAssembly(migrationAssembly));//migrationAssembly or IdentityServerAspNetIdentity
+            });
 
-            //.AddInMemoryIdentityResources(Config.IdentityResources)
-            //.AddInMemoryApiScopes(Config.ApiScopes)
-            //.AddInMemoryClients(Config.Clients)
-            //.AddAspNetIdentity<ApplicationUser>();
 
             // not recommended for production - you need to store your key material somewhere secure
             builder.AddDeveloperSigningCredential();

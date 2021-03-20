@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Homework.Data\Homework.Data.csproj" />
+    <ProjectReference Include="..\Homework.IRepository\Homework.IRepository.csproj" />
   </ItemGroup>
 
 </Project>

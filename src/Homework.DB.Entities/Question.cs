@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 using static Homework.Core.HomeworkConstants;
 
@@ -9,6 +11,8 @@ namespace Homework.DB.Entities
     public partial class Question
     {
         private ICollection<Choice> _choices;
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string QuestionId { get; set; }
         public string HomeworkId { get; set; }
         public string QuestionTitle { get; set; }

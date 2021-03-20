@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Homework.DB.Entities
@@ -12,7 +13,7 @@ namespace Homework.DB.Entities
             Homeworks = new HashSet<Homework>();
             StudentCourses = new HashSet<StudentCourse>();
         }
-
+        [Key]
         public string CourseId { get; set; }
         public string CourseName { get; set; }
 

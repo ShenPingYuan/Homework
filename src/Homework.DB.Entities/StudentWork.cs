@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Homework.DB.Entities
@@ -7,6 +9,8 @@ namespace Homework.DB.Entities
     //学生做好的作业
     public partial class StudentWork
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string StudentWorkId { get; set; }
         public string StudentId { get; set; }
         public string HomeworkId { get; set; }
