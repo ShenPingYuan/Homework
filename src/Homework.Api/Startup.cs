@@ -97,7 +97,7 @@ namespace Homework.Api
             services.AddCors(options =>
             {
                 // this defines a CORS policy called "default"
-                options.AddPolicy("default", policy =>
+                options.AddPolicy("VueClient", policy =>
                 {
                     policy.WithOrigins("http://localhost:8080/")
                         .AllowAnyHeader()
@@ -119,7 +119,7 @@ namespace Homework.Api
 
             app.UseRouting();
 
-            app.UseCors("default");
+            app.UseCors("VueClient");
             app.UseAuthentication();
             app.UseAuthorization();
 

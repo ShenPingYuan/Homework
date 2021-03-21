@@ -218,7 +218,7 @@ namespace IdentityServer
                     // 需要用户点击授权
                     RequireConsent = true,
                     // AccessToken 的有效期
-                    AccessTokenLifetime = 60 * 5,
+                    AccessTokenLifetime = 60 * 5,//5分钟
 
                     RedirectUris =
                     {
@@ -235,7 +235,16 @@ namespace IdentityServer
                     // vue 和 IdentityServer 不在一个域上，需要指定跨域
                     AllowedCorsOrigins = { "http://localhost:8080", "http://192.168.3.10:8080" },
 
-                    AllowedScopes = { "openid", "profile", "api1" }
+                    AllowedScopes = 
+                    {
+                        "api1",
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        IdentityServerConstants.StandardScopes.Address,
+                        IdentityServerConstants.StandardScopes.Phone,
+                        IdentityServerConstants.StandardScopes.Email,
+                        "roles",
+                    },
                 }
             };
     }

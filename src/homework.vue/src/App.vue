@@ -1,14 +1,15 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <router-view/>
   </div>
 </template>
 
-<script>
-export default {
-  name: "app"
-};
-</script>
+<script lang="ts">
+import { Component, Vue, Provide } from 'vue-property-decorator';
+import { OpenIdConnectService } from '@/open-id-connect/OpenIdConnectService';
 
-<style>
-</style>
+@Component
+export default class App extends Vue {
+  @Provide() private oidc: OpenIdConnectService = OpenIdConnectService.getInstance();
+}
+</script>

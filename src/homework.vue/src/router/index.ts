@@ -5,53 +5,63 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-const routes: Array<RouteConfig> = [
+const routes: Array<RouteConfig> = 
+// [
+//   {
+//     path: '/login',
+//     name: 'Login',
+//     component: () => import('../components/Login.vue'),
+//   },
+//   { path: '/', redirect: '/Login' },
+//   {
+//     path: '/home',
+//     name: 'Home',
+   
+//     component: () => import('../components/Home.vue'),
+//     redirect:{name:'Welcome'},
+//     children: [
+//       {
+//         path: '/welcome',
+//         name: 'Welcome',
+//         component: () => import('../components/Welcome.vue'),
+//       },
+//       {
+//         path: '/users',
+//         name: 'Users',
+//         component: () => import('../components/user/Users.vue'),
+//       },
+//       { path: '/rights', component: () => import('../components/power/Rights.vue'), },
+//       { path: '/roles', component: () => import('../components/power/Roles.vue'), },
+//       { path: '/categories', component: () => import('../components/goods/Cate.vue'), },
+//       { path: '/params', component: () => import('../components/goods/Params.vue'), },
+//       { path: '/goods', component: () => import('../components/goods/List.vue'), },
+//       { path: '/goods/add', component: () => import('../components/goods/Add.vue'), },
+//       { path: '/orders', component: () => import('../components/order/Order.vue'), },
+//       { path: '/reports', component: () => import('../components/report/Report.vue'), },
+//     ],
+//   },
+// ];
+[
   {
-    path: '/login',
-    name: 'Login',
-    component: () => import('../components/Login.vue'),
+    path: '/',
+    name: 'loading',
+    component: () => import('./views/Loading.vue'),
   },
-  { path: '/', redirect: '/Login' },
   {
     path: '/home',
-    name: 'Home',
-   
-    component: () => import('../components/Home.vue'),
-    redirect:{name:'Welcome'},
-    children: [
-      {
-        path: '/welcome',
-        name: 'Welcome',
-        component: () => import('../components/Welcome.vue'),
-      },
-      {
-        path: '/users',
-        name: 'Users',
-        component: () => import('../components/user/Users.vue'),
-      },
-      { path: '/rights', component: () => import('../components/power/Rights.vue'), },
-      { path: '/roles', component: () => import('../components/power/Roles.vue'), },
-      { path: '/categories', component: () => import('../components/goods/Cate.vue'), },
-      { path: '/params', component: () => import('../components/goods/Params.vue'), },
-      { path: '/goods', component: () => import('../components/goods/List.vue'), },
-      { path: '/goods/add', component: () => import('../components/goods/Add.vue'), },
-      { path: '/orders', component: () => import('../components/order/Order.vue'), },
-      { path: '/reports', component: () => import('../components/report/Report.vue'), },
-    ],
+    name: 'home',
+    component: () => import('./views/Home.vue'),
   },
-  // {
-  //   path: '/',
-  //   name: 'Home',
-  //   component: Home
-  // },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // }
+  {
+    path: '/signin-oidc',
+    name: 'signin-oidc',
+    component: () => import('./views/SigninOidc.vue'),
+  },
+  {
+    path: '/redirect-silent-renew',
+    name: 'redirect-silent-renew',
+    component: () => import('./views/RedirectSilentRenew.vue'),
+  },
 ];
 
 const router = new VueRouter({
