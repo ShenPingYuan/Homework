@@ -50,7 +50,10 @@ export class OpenIdConnectService {
     get userAvailavle(): boolean {
         return !!this.currentUser;
     }
-
+    async login () {
+        await this.triggerSignIn();
+        return this.currentUser;
+      }
     // 获取当前用户信息
     get user(): User {
         return this.currentUser as User;
