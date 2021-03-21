@@ -25,12 +25,8 @@
           </el-input>
         </el-form-item>
         <el-form-item class="form-btns">
-          <el-button type="primary" class="form-btn" @click="login"
-            >登陆</el-button
-          >
-          <el-button type="info" class="form-btn" @click="resetLoginForm"
-            >重置</el-button
-          >
+          <el-button type="primary" class="form-btn" @click="login">登陆</el-button>
+          <el-button type="info" class="form-btn" @click="resetLoginForm">重置</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -42,7 +38,7 @@ export default {
     return {
       loginForm: {
         username: "admin",
-        password: "123456",
+        password: "123456"
       },
       loginFormRules: {
         username: [
@@ -51,19 +47,14 @@ export default {
             min: 3,
             max: 10,
             message: "长度在 3 到 10 个字符",
-            trigger: "blur",
-          },
+            trigger: "blur"
+          }
         ],
         password: [
           { required: true, message: "请输入登陆密码" },
-          {
-            min: 3,
-            max: 10,
-            message: "长度在 3 到 10 个字符",
-            trigger: "blur",
-          },
-        ],
-      },
+          { min: 3, max: 10, message: "长度在 3 到 10 个字符", trigger: "blur" }
+        ]
+      }
     };
   },
   methods: {
@@ -71,16 +62,16 @@ export default {
       this.$refs.loginFormRef.resetFields();
     },
     login() {
-      this.$refs.loginFormRef.validate((validateResult) => {
+      this.$refs.loginFormRef.validate(validateResult => {
         if (validateResult) {
           this.axios({
             url: "login",
             method: "post",
-            data: this.loginForm,
+            data: this.loginForm
           })
-            .then((result) => {
-              const { status, data } = result;
-              console.log(data);
+            .then(result => {
+              const { status,data } = result;
+              console.log(data)
               console.log(data.data.token);
               if (status == 200) {
                 this.$message.success("登陆成功");
@@ -88,13 +79,13 @@ export default {
                 this.$router.push("/home");
               }
             })
-            .catch((error) => {
+            .catch(error => {
               this.$message.error("登陆失败");
             });
         }
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
