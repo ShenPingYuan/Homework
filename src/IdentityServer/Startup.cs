@@ -34,9 +34,13 @@ namespace IdentityServer
 
         public void ConfigureServices(IServiceCollection services)
         {
+            // configures the OpenIdConnect handlers to persist the state parameter into the server-side IDistributedCache.
+            //services.AddOidcStateDataFormatterCache();
+            services.AddOidcStateDataFormatterCache("Google", "oidc");
             services.AddControllersWithViews();
 
             var migrationAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;//get current assembly
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(Configuration.GetConnectionString("MySQLConnection"), o =>
                  o.MigrationsAssembly(migrationAssembly)));//migrationAssembly or IdentityServerAspNetIdentity
@@ -128,7 +132,7 @@ namespace IdentityServer
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseIdentityServer();
+            app.UseIdentityServer();//include UseAuthenticate
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {

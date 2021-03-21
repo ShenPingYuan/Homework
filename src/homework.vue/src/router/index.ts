@@ -47,22 +47,22 @@ const routes: Array<RouteConfig> =
   {
     path: '/',
     name: 'loading',
-    component: () => import('./views/Loading.vue'),
+    component: () => import('../views/Loading.vue'),
   },
   {
     path: '/home',
     name: 'home',
-    component: () => import('./views/Home.vue'),
+    component: () => import('../views/Home.vue'),
   },
   {
     path: '/signin-oidc',
     name: 'signin-oidc',
-    component: () => import('./views/SigninOidc.vue'),
+    component: () => import('../views/SigninOidc.vue'),
   },
   {
     path: '/redirect-silent-renew',
     name: 'redirect-silent-renew',
-    component: () => import('./views/RedirectSilentRenew.vue'),
+    component: () => import('../views/RedirectSilentRenew.vue'),
   },
 ];
 
