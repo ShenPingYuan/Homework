@@ -47,7 +47,7 @@ namespace IdentityServer
                         new Claim(JwtClaimTypes.FamilyName, "Smith"),
                         new Claim(JwtClaimTypes.WebSite, "http://alice.com"),
                         new Claim(JwtClaimTypes.Gender,"女人"),
-                        new Claim(JwtClaimTypes.Role,"管理员"),
+                        new Claim(JwtClaimTypes.Role,"Student"),
                         new Claim(JwtClaimTypes.Address,"重庆"),
                     };
                     if (alice == null)
@@ -93,7 +93,7 @@ namespace IdentityServer
                             new Claim(JwtClaimTypes.WebSite, "http://bob.com"),
                             new Claim("location", "somewhere"),
                             new Claim(JwtClaimTypes.Gender,"男人"),
-                            new Claim(JwtClaimTypes.Role,"普通员工"),
+                            new Claim(JwtClaimTypes.Role,"Student"),
                             new Claim(JwtClaimTypes.Address,"四川"),
                     };
                     if (bob == null)
@@ -128,6 +128,98 @@ namespace IdentityServer
                             throw new Exception(result.Errors.First().Description);
                         }
                         Log.Information("bob updated");
+                    }
+
+                    var teacher1 = userMgr.FindByNameAsync("teacher1").Result;
+                    var teacher1Claim = new Claim[]
+                    {
+                            new Claim(JwtClaimTypes.Name, "Teacher Smith"),
+                            new Claim(JwtClaimTypes.GivenName, "Teacher"),
+                            new Claim(JwtClaimTypes.FamilyName, "Smith"),
+                            new Claim(JwtClaimTypes.WebSite, "http://bob.com"),
+                            new Claim("course", "语文"),
+                            new Claim(JwtClaimTypes.Gender,"男人"),
+                            new Claim(JwtClaimTypes.Role,"Teacher"),
+                            new Claim(JwtClaimTypes.Address,"四川"),
+                    };
+                    if (teacher1 == null)
+                    {
+                        teacher1 = new ApplicationUser
+                        {
+                            UserName = "teacher1",
+                            Email = "TeacherSmith@email.com",
+                            EmailConfirmed = true
+                        };
+                        var result = userMgr.CreateAsync(teacher1, "Pass123$").Result;
+                        if (!result.Succeeded)
+                        {
+                            throw new Exception(result.Errors.First().Description);
+                        }
+
+                        result = userMgr.AddClaimsAsync(teacher1, teacher1Claim).GetAwaiter().GetResult();
+                        if (!result.Succeeded)
+                        {
+                            throw new Exception(result.Errors.First().Description);
+                        }
+                        Log.Information("Teacher created");
+                    }
+                    else
+                    {
+                        Log.Information("Teacher already exists");
+                        Log.Information("updating Teacher...");
+                        var result = userMgr.RemoveClaimsAsync(bob, userMgr.GetClaimsAsync(bob).GetAwaiter().GetResult()).GetAwaiter().GetResult();
+                        var resultAddClaim = userMgr.AddClaimsAsync(bob, bobClaim).GetAwaiter().GetResult();
+                        if (!result.Succeeded && !resultAddClaim.Succeeded)
+                        {
+                            throw new Exception(result.Errors.First().Description);
+                        }
+                        Log.Information("Teacher updated");
+                    }
+
+                    var teacher2 = userMgr.FindByNameAsync("teacher2").Result;
+                    var teacher2Claim = new Claim[]
+                    {
+                            new Claim(JwtClaimTypes.Name, "teacher2 Smith"),
+                            new Claim(JwtClaimTypes.GivenName, "teacher2"),
+                            new Claim(JwtClaimTypes.FamilyName, "Smith"),
+                            new Claim(JwtClaimTypes.WebSite, "http://bob.com"),
+                            new Claim("course", "数学"),
+                            new Claim(JwtClaimTypes.Gender,"男人"),
+                            new Claim(JwtClaimTypes.Role,"Teacher"),
+                            new Claim(JwtClaimTypes.Address,"四川"),
+                    };
+                    if (teacher2 == null)
+                    {
+                        teacher2 = new ApplicationUser
+                        {
+                            UserName = "teacher2",
+                            Email = "teacher2Smith@email.com",
+                            EmailConfirmed = true
+                        };
+                        var result = userMgr.CreateAsync(teacher2, "Pass123$").Result;
+                        if (!result.Succeeded)
+                        {
+                            throw new Exception(result.Errors.First().Description);
+                        }
+
+                        result = userMgr.AddClaimsAsync(teacher2, teacher2Claim).GetAwaiter().GetResult();
+                        if (!result.Succeeded)
+                        {
+                            throw new Exception(result.Errors.First().Description);
+                        }
+                        Log.Information("teacher2 created");
+                    }
+                    else
+                    {
+                        Log.Information("teacher2 already exists");
+                        Log.Information("updating teacher2...");
+                        var result = userMgr.RemoveClaimsAsync(bob, userMgr.GetClaimsAsync(bob).GetAwaiter().GetResult()).GetAwaiter().GetResult();
+                        var resultAddClaim = userMgr.AddClaimsAsync(bob, bobClaim).GetAwaiter().GetResult();
+                        if (!result.Succeeded && !resultAddClaim.Succeeded)
+                        {
+                            throw new Exception(result.Errors.First().Description);
+                        }
+                        Log.Information("teacher2 updated");
                     }
                 }
             }

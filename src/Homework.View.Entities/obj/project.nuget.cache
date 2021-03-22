@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UqjnO/HTldgd/XsGNsQCagBWqeMGVpYGOc/IjcdQZ/X7u5K1Qm5xKypVoGo8coblN34526sKyB2Tz9GV1W+Tsg==",
+  "dgSpecHash": "OcyUpAVqh8nkVDKkf8gkM5QFsoTVZ018PDwvYKUgVxNKQ0kYxB+Nqi69ErUp6q/+PTV1lb015IySjrm1jaEKrA==",
   "success": true,
   "projectFilePath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.View.Entities\\Homework.Dtos.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\MichaelShen\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

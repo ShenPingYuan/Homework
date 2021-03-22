@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Homework.DB.Entities;
+using Homework.Dtos;
+using Homework.IRepository;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,24 +16,48 @@ namespace Homework.Api.Controllers
     [ApiController]
     public class HomeworkController : ControllerBase
     {
-        // GET: api/<HomeworkController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        public readonly IHomeworkRepository _homeworkRepository;
+        private readonly IMapper _mapper;
+
+        public HomeworkController(
+            IHomeworkRepository homeworkRepository,
+            IMapper mapper)
         {
-            return new string[] { "value1", "value2" };
+            _homeworkRepository = homeworkRepository ?? throw new ArgumentNullException(nameof(homeworkRepository));
+            _mapper=mapper ?? throw new ArgumentNullException(nameof(mapper));
+        }
+        // GET: api/<HomeworkController>
+        [HttpGet("api/homeworks")]
+        public ActionResult<IEnumerable<DB.Entities.Homework>> Get()
+        {
+            var hws = _homeworkRepository.GetAllEntities().ToList();
+            var dto = _mapper.Map<IEnumerable<HomeworkDto>>(hws);
+            return Ok(dto);
         }
 
         // GET api/<HomeworkController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("api/homeworks/{id}")]
+        public ActionResult<IEnumerable<DB.Entities.Homework>> Get(int id)
         {
-            return "value";
+            var hws = _homeworkRepository.LoadEntities(x=>x.HomeworkId==id.ToString()).ToList();
+            var dto = _mapper.Map<IEnumerable<HomeworkDto>>(hws);
+            return Ok(dto);
         }
-
         // POST api/<HomeworkController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult<Student>> Post([FromBody] HomeworkDto dto)
         {
+            if(dto==null)
+            {
+                return BadRequest();
+            }
+            var homework = _mapper.Map<DB.Entities.Homework>(dto);
+            var homeworkResult = await _homeworkRepository.AddEntityAsync(homework);
+            if(homeworkResult!=null)
+            {
+                return Conflict();
+            }
+            return CreatedAtAction("Get", new { id = homeworkResult.HomeworkId }, homeworkResult);
         }
 
         // PUT api/<HomeworkController>/5

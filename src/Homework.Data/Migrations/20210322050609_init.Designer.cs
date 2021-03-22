@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Homework.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210320075402_init0")]
-    partial class init0
+    [Migration("20210322050609_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,6 +48,9 @@ namespace Homework.Data.Migrations
                         .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.Property<string>("CourseName")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("TeacherId")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("CourseId");

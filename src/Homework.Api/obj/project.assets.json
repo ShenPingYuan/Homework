@@ -3217,6 +3217,9 @@
       "Homework.Dtos/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Homework.Entities": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Homework.Dtos.dll": {}
         },
@@ -10106,7 +10109,6 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "Homework.Data >= 1.0.0",
       "Homework.Dtos >= 1.0.0",
-      "Homework.Entities >= 1.0.0",
       "Homework.IRepository >= 1.0.0",
       "Homework.Repository >= 1.0.0",
       "IdentityServer4.AccessTokenValidation >= 3.0.1",
@@ -10153,9 +10155,6 @@
           "projectReferences": {
             "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\Homework.Data.csproj": {
               "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\Homework.Data.csproj"
-            },
-            "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj": {
-              "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj"
             },
             "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.IRepository\\Homework.IRepository.csproj": {
               "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.IRepository\\Homework.IRepository.csproj"

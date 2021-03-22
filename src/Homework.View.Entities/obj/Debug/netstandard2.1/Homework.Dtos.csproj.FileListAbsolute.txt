@@ -7,3 +7,8 @@ C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities
 C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\obj\Debug\netstandard2.1\Homework.Dtos.csproj.CoreCompileInputs.cache
 C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\obj\Debug\netstandard2.1\Homework.Dtos.dll
 C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\obj\Debug\netstandard2.1\Homework.Dtos.pdb
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\bin\Debug\netstandard2.1\Homework.Core.dll
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\bin\Debug\netstandard2.1\Homework.Entities.dll
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\bin\Debug\netstandard2.1\Homework.Entities.pdb
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\bin\Debug\netstandard2.1\Homework.Core.pdb
+C:\Users\MichaelShen\Desktop\面试题项目\homework\src\Homework.View.Entities\obj\Debug\netstandard2.1\Homework.Dtos.csproj.CopyComplete

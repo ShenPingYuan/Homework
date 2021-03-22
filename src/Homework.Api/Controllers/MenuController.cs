@@ -69,41 +69,33 @@ namespace Homework.Api.Controllers
                 new MenuItem
                 {
                     Id="101",
-                    AuthName= "商品管理",
-                    Path="goods",
+                    AuthName= "老师作业管理",
+                    Path="homeworkManager",
                     Children=new List<MenuItem>
                     {
                         new MenuItem
                         {
                             Id="104",
-                            AuthName= "商品列表",
-                            Path="goods",
+                            AuthName= "作业列表",
+                            Path="homeworkManager",
                             Children=null,
                             Order=1
-                        },
-                        new MenuItem
-                        {
-                            Id="115",
-                            AuthName= "分类参数",
-                            Path="params",
-                            Children=null,
-                            Order=2
-                        },
+                        }
                     },
                     Order=3
                 },
                 new MenuItem
                 {
                     Id="102",
-                    AuthName= "订单管理",
-                    Path="orders",
+                    AuthName= "学生做作业",
+                    Path="doHomework",
                     Children=new List<MenuItem>
                     {
                         new MenuItem
                         {
                             Id="107",
-                            AuthName= "订单列表",
-                            Path="orders",
+                            AuthName= "作业列表",
+                            Path="doHomework",
                             Children=null,
                             Order=null
                         }
@@ -120,7 +112,7 @@ namespace Homework.Api.Controllers
                         new MenuItem
                         {
                             Id="146",
-                            AuthName= "数据报表",
+                            AuthName= "作业完成情况",
                             Path="reports",
                             Children=null,
                             Order=null

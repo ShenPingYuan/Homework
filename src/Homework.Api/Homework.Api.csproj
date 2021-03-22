@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Homework.Data\Homework.Data.csproj" />
-    <ProjectReference Include="..\Homework.DB.Entities\Homework.Entities.csproj" />
     <ProjectReference Include="..\Homework.IRepository\Homework.IRepository.csproj" />
     <ProjectReference Include="..\Homework.Repository\Homework.Repository.csproj" />
     <ProjectReference Include="..\Homework.View.Entities\Homework.Dtos.csproj" />

@@ -34,9 +34,6 @@
               "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\Homework.Data.csproj": {
                 "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\Homework.Data.csproj"
               },
-              "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj": {
-                "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj"
-              },
               "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.IRepository\\Homework.IRepository.csproj": {
                 "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.IRepository\\Homework.IRepository.csproj"
               },
@@ -478,7 +475,11 @@
         "frameworks": {
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj": {
+                "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

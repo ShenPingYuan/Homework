@@ -8,4 +8,8 @@ export const endPoint = {
     AddTodo: `${apihost}/api/todo`,
     //获取菜单
     GetMenus: `${apihost}/api/menus`,
+    //初始化老师
+    InitTeacher:`${apihost}/api/teacher/initteacher`,
+    //初始化学生
+    InitStudent:`${apihost}/api/initstudent`,
 };

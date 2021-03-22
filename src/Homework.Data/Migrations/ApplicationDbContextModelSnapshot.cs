@@ -48,6 +48,9 @@ namespace Homework.Data.Migrations
                     b.Property<string>("CourseName")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
+                    b.Property<string>("TeacherId")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
                     b.HasKey("CourseId");
 
                     b.ToTable("Courses");

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Homework.Data.Migrations
 {
-    public partial class init0 : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,8 @@ namespace Homework.Data.Migrations
                 columns: table => new
                 {
                     CourseId = table.Column<string>(nullable: false),
-                    CourseName = table.Column<string>(nullable: true)
+                    CourseName = table.Column<string>(nullable: true),
+                    TeacherId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

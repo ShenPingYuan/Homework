@@ -14,7 +14,7 @@ export const openIdConnectSettings = {
     redirect_uri: `${vueBase}/signin-oidc`,
     post_logout_redirect_uri: `${vueBase}/`,
     silent_redirect_uri: `${vueBase}/redirect-silentrenew`,
-    scope: 'openid profile api1',
+    scope: 'openid profile api1 roles',
     response_type: `id_token token`,
     automaticSilentRenew: true,
     loadUserInfo: true,

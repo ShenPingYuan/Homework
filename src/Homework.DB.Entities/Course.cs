@@ -16,6 +16,7 @@ namespace Homework.DB.Entities
         [Key]
         public string CourseId { get; set; }
         public string CourseName { get; set; }
+        public string TeacherId { get; set; }
 
         //public string EnglishName { get; set; }
         //public string CScore { get; set; }

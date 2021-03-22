@@ -54,7 +54,8 @@
 
 <script>
 import { OpenIdConnectService } from "@/open-id-connect/OpenIdConnectService";
-import {endPoint} from "@/common/Config"
+import { endPoint } from "@/common/Config";
+
 const oidc = OpenIdConnectService.getInstance();
 export default {
   data() {
@@ -67,11 +68,20 @@ export default {
         125: "el-icon-folder",
         145: "el-icon-coin",
       },
+      role: "",
+      teacherDto: {
+        Sub: "",
+        CourseName: "",
+      },
       isCollapse: false,
     };
   },
   created() {
     this.getMenulist();
+    this.role = oidc.user.profile.role;
+    this.teacherDto.Sub = oidc.user.profile.sub;
+    this.CourseName = oidc.user.profile.course;
+    //this.InitUserInfo();
   },
   computed: {},
   methods: {
@@ -84,6 +94,25 @@ export default {
         console.log(result.data);
         this.menulist = result.data;
       });
+    },
+    InitUserInfo() {
+      console.log(oidc.user);
+      if (this.role == "Teacher") {
+        this.axios({
+          method: "post",
+          url: endPoint.InitTeacher,
+          data: this.teacherDto,
+        }).then((result) => {
+          console.log(result.data);
+        });
+      } else if (this.role == "Student") {
+        this.axios({
+          method: "post",
+          url: endPoint.InitStudent,
+        }).then((result) => {
+          console.log(result.data);
+        });
+      }
     },
     signOut() {
       //sessionStorage.clear();

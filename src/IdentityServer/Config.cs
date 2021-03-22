@@ -213,7 +213,7 @@ namespace IdentityServer
                     ClientName = "Homework.Vue",
                     ClientUri = "http://localhost:8080",
                     RequireClientSecret = false,
-                    AllowedGrantTypes = GrantTypes.Code,
+                    AllowedGrantTypes = GrantTypes.Implicit,
                     // AccessToken 是否可以通过浏览器返回
                     AllowAccessTokensViaBrowser = true,
                     // 需要用户点击授权

@@ -28,7 +28,6 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
           "Homework.Data": "1.0.0",
           "Homework.Dtos": "1.0.0",
-          "Homework.Entities": "1.0.0",
           "Homework.IRepository": "1.0.0",
           "Homework.Repository": "1.0.0",
           "IdentityServer4.AccessTokenValidation": "3.0.1",
@@ -2853,6 +2852,9 @@
         }
       },
       "Homework.Dtos/1.0.0": {
+        "dependencies": {
+          "Homework.Entities": "1.0.0"
+        },
         "runtime": {
           "Homework.Dtos.dll": {}
         },
