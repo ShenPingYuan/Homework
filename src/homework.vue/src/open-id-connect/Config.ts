@@ -1,8 +1,8 @@
 import Oidc from "oidc-client";
 
-export const identityServerBase = 'http://localhost:5000';
+export const identityServerBase = 'https://localhost:5000';
 
-export const apiBase = 'http://localhost:5001';
+export const apiBase = 'https://localhost:5001';
 
 export const vueBase = 'http://localhost:8080';
 

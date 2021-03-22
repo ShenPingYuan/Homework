@@ -11,7 +11,7 @@
       <el-button type="info" @click="signOut">退出</el-button>
     </el-header>
     <el-container>
-      <el-aside :width="isCollapse?'64px':'200px'">
+      <el-aside :width="isCollapse ? '64px' : '200px'">
         <div class="toggle-button" @click="toggleButton">|||</div>
         <el-menu
           default-active
@@ -25,10 +25,14 @@
           :collapse-transition="false"
           router
         >
-          <el-submenu :index="item.id+''" v-for="item in menulist" :key="item.id">
+          <el-submenu
+            :index="item.id + ''"
+            v-for="item in menulist"
+            :key="item.id"
+          >
             <template slot="title">
               <i :class="iconObj[item.id]"></i>
-              <span>{{item.authName}}</span>
+              <span>{{ item.authName }}</span>
             </template>
             <el-menu-item
               :index="childItem.path.toString()"
@@ -36,7 +40,7 @@
               :key="childItem.id"
             >
               <i class="el-icon-menu"></i>
-              <span slot="title">{{childItem.authName}}</span>
+              <span slot="title">{{ childItem.authName }}</span>
             </el-menu-item>
           </el-submenu>
         </el-menu>
@@ -49,18 +53,21 @@
 </template>
 
 <script>
+import { OpenIdConnectService } from "@/open-id-connect/OpenIdConnectService";
+import {endPoint} from "@/common/Config"
+const oidc = OpenIdConnectService.getInstance();
 export default {
   data() {
     return {
       menulist: [],
       iconObj: {
-        "101": "el-icon-user-solid",
-        "102": "el-icon-s-goods",
-        "103": "el-icon-s-cooperation",
-        "125": "el-icon-folder",
-        "145": "el-icon-coin"
+        101: "el-icon-user-solid",
+        102: "el-icon-s-goods",
+        103: "el-icon-s-cooperation",
+        125: "el-icon-folder",
+        145: "el-icon-coin",
       },
-      isCollapse: false
+      isCollapse: false,
     };
   },
   created() {
@@ -72,20 +79,22 @@ export default {
       //通过向后端发送请求得到 菜单数据 并把菜单列表赋给this.menulist
       this.axios({
         method: "get",
-        url: "menus"
-      }).then(result => {
-        console.log(result.data.data);
-        this.menulist = result.data.data;
+        url: endPoint.GetMenus,
+      }).then((result) => {
+        console.log(result.data);
+        this.menulist = result.data;
       });
     },
     signOut() {
-      sessionStorage.clear();
-      this.$router.push("/login");
+      //sessionStorage.clear();
+      oidc.triggerSignOut();
+      //sessionStorage.clear();
+      //this.$router.push("/login");
     },
     toggleButton() {
       this.isCollapse = !this.isCollapse;
-    }
-  }
+    },
+  },
 };
 </script>
 

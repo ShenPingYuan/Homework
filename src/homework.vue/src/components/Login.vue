@@ -27,12 +27,15 @@
         <el-form-item class="form-btns">
           <el-button type="primary" class="form-btn" @click="login">登陆</el-button>
           <el-button type="info" class="form-btn" @click="resetLoginForm">重置</el-button>
+          <el-button type="success" class="form-btn" @click="idpLogin" plain>IDP登陆</el-button>
         </el-form-item>
       </el-form>
     </div>
   </div>
 </template>
 <script>
+import { OpenIdConnectService } from '@/open-id-connect/OpenIdConnectService';
+const oidc = OpenIdConnectService.getInstance();
 export default {
   data() {
     return {
@@ -60,6 +63,9 @@ export default {
   methods: {
     resetLoginForm() {
       this.$refs.loginFormRef.resetFields();
+    },
+    idpLogin(){
+      oidc.triggerSignIn();
     },
     login() {
       this.$refs.loginFormRef.validate(validateResult => {

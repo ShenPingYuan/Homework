@@ -125,25 +125,7 @@ namespace IdentityServer
                         "api1"
                     }
                 },
-                // JavaScript Client
-                new Client
-                {
-                    ClientId = "js",
-                    ClientName = "JavaScript Client",
-                    AllowedGrantTypes = GrantTypes.Code,
-                    RequireClientSecret = false,
-
-                    RedirectUris =           { "https://localhost:5003/callback.html" },
-                    PostLogoutRedirectUris = { "https://localhost:5003/index.html" },
-                    AllowedCorsOrigins =     { "https://localhost:5003" },
-                    RequireConsent=true,
-                    AllowedScopes =
-                    {
-                        IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile,
-                        "api1"
-                    }
-                },
+               
                 //Resourse Owner Password
                 new Client
                 {
@@ -205,14 +187,33 @@ namespace IdentityServer
                     RequireConsent=true,
                     AccessTokenType=AccessTokenType.Reference//默认AccessTokenType.Jwt
                 },
+                 // JavaScript Client
+                new Client
+                {
+                    ClientId = "js",
+                    ClientName = "JavaScript Client",
+                    AllowedGrantTypes = GrantTypes.Code,
+                    RequireClientSecret = false,
+
+                    RedirectUris =           { "https://localhost:5003/callback.html" },
+                    PostLogoutRedirectUris = { "https://localhost:5003/index.html" },
+                    AllowedCorsOrigins =     { "https://localhost:5003" },
+                    RequireConsent=true,
+                    AllowedScopes =
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "api1"
+                    }
+                },
                 // SPA client using implicit flow
                 new Client
                 {
                     ClientId = "homework.vue",
                     ClientName = "Homework.Vue",
-                    ClientUri = "http://localhost:8080/",
-
-                    AllowedGrantTypes = GrantTypes.Implicit,
+                    ClientUri = "http://localhost:8080",
+                    RequireClientSecret = false,
+                    AllowedGrantTypes = GrantTypes.Code,
                     // AccessToken 是否可以通过浏览器返回
                     AllowAccessTokensViaBrowser = true,
                     // 需要用户点击授权
@@ -234,7 +235,6 @@ namespace IdentityServer
                     PostLogoutRedirectUris = { "http://localhost:8080/" },
                     // vue 和 IdentityServer 不在一个域上，需要指定跨域
                     AllowedCorsOrigins = { "http://localhost:8080", "http://192.168.3.10:8080" },
-
                     AllowedScopes = 
                     {
                         "api1",

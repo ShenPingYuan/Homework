@@ -10,13 +10,14 @@ import { OpenIdConnectService } from '@/open-id-connect/OpenIdConnectService';
 export default class Loading extends Vue {
 @Inject() private oidc!: OpenIdConnectService;
 
-public created() {
+ created() {
     // 这里去 oidc-client 获取是否已经登录
     console.log('oidc', this.oidc.userAvailavle, this.oidc);
     if (!this.oidc.userAvailavle) {
-    this.oidc.triggerSignIn();
+      this.$router.push({ path: '/login' });
+      this.oidc.triggerSignIn();
     } else {
-    this.$router.push({ path: '/home' });
+      this.$router.push({ path: '/home' });
     }
 }
 }

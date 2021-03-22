@@ -3214,6 +3214,16 @@
           "bin/placeholder/Homework.Data.dll": {}
         }
       },
+      "Homework.Dtos/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Homework.Dtos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Homework.Dtos.dll": {}
+        }
+      },
       "Homework.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -10069,6 +10079,11 @@
       "path": "../Homework.Data/Homework.Data.csproj",
       "msbuildProject": "../Homework.Data/Homework.Data.csproj"
     },
+    "Homework.Dtos/1.0.0": {
+      "type": "project",
+      "path": "../Homework.View.Entities/Homework.Dtos.csproj",
+      "msbuildProject": "../Homework.View.Entities/Homework.Dtos.csproj"
+    },
     "Homework.Entities/1.0.0": {
       "type": "project",
       "path": "../Homework.DB.Entities/Homework.Entities.csproj",
@@ -10090,6 +10105,8 @@
       "AutoMapper >= 10.1.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "Homework.Data >= 1.0.0",
+      "Homework.Dtos >= 1.0.0",
+      "Homework.Entities >= 1.0.0",
       "Homework.IRepository >= 1.0.0",
       "Homework.Repository >= 1.0.0",
       "IdentityServer4.AccessTokenValidation >= 3.0.1",
@@ -10137,11 +10154,17 @@
             "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\Homework.Data.csproj": {
               "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Data\\Homework.Data.csproj"
             },
+            "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj": {
+              "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.DB.Entities\\Homework.Entities.csproj"
+            },
             "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.IRepository\\Homework.IRepository.csproj": {
               "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.IRepository\\Homework.IRepository.csproj"
             },
             "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Repository\\Homework.Repository.csproj": {
               "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.Repository\\Homework.Repository.csproj"
+            },
+            "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.View.Entities\\Homework.Dtos.csproj": {
+              "projectPath": "C:\\Users\\MichaelShen\\Desktop\\面试题项目\\homework\\src\\Homework.View.Entities\\Homework.Dtos.csproj"
             }
           }
         }

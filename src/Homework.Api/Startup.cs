@@ -99,7 +99,7 @@ namespace Homework.Api
                 // this defines a CORS policy called "default"
                 options.AddPolicy("VueClient", policy =>
                 {
-                    policy.WithOrigins("http://localhost:8080/")
+                    policy.WithOrigins("http://localhost:8080")
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });
